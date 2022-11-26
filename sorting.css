@@ -1,0 +1,51 @@
+.button {
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    transition-duration: 0.1s;
+    cursor: hand;
+}
+.button1 {
+    background-color: white; 
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button1:disabled {
+    border: 2px solid grey;
+    background-color: grey;
+    color: black;
+}
+
+.button2 {
+    background-color: white; 
+    color: #008CBA; 
+    float: right;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button2:disabled {
+    border: 2px solid grey;
+    background-color: grey;
+    color: black;
+}
+
+.box{
+    margin:auto;
+    height:251px;
+    width:301px;
+}
