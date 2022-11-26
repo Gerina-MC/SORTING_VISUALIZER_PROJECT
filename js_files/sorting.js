@@ -35,9 +35,9 @@ function create_array()
         div.style.height = nh.toString()+"px";
         div.style.background = "blue";
         div.style.display = "inline-block";
-        div.style.position="absolute";
+        /*div.style.position="absolute";
         //div.style.top=(251-h)+"px";
-        div.style.left=(420+(w*i))+"px";
+        div.style.left=(420+(w*i))+"px";*/
         div.style.border = "1px solid #000";
         var it="n"+i.toString();
         div.setAttribute("id",it);
