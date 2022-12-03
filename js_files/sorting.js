@@ -6,6 +6,7 @@ function onld()
     document.getElementById("se").disabled=true;
     document.getElementById("in").disabled=true;
     document.getElementById("me").disabled=true;
+    document.getElementById("qu").disabled=true;
 }
 function create_array()
 {
@@ -15,6 +16,7 @@ function create_array()
     document.getElementById("se").disabled=false;
     document.getElementById("in").disabled=false;
     document.getElementById("me").disabled=false;
+    document.getElementById("qu").disabled=false;
     document.getElementById("mr").innerHTML='Choose a Sorting Algorithm';
     var d = document.getElementById("Ar_Dis");
     d.remove();
@@ -35,9 +37,6 @@ function create_array()
         div.style.height = nh.toString()+"px";
         div.style.background = "blue";
         div.style.display = "inline-block";
-        /*div.style.position="absolute";
-        //div.style.top=(251-h)+"px";
-        div.style.left=(420+(w*i))+"px";*/
         div.style.border = "1px solid #000";
         var it="n"+i.toString();
         div.setAttribute("id",it);

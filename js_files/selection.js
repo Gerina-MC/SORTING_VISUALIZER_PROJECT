@@ -11,6 +11,7 @@ async function sel()
     document.getElementById("se").disabled=true;
     document.getElementById("in").disabled=true;
     document.getElementById("me").disabled=true;
+    document.getElementById("qu").disabled=true;
     document.getElementById("mr").innerHTML='Sorting Algorithm: Selection Sort';
     for(let i=0;i<no_of_bar;i++)
     {

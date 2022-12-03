@@ -12,6 +12,7 @@ async function mer()
     document.getElementById("se").disabled=true;
     document.getElementById("in").disabled=true;
     document.getElementById("me").disabled=true;
+    document.getElementById("qu").disabled=true;
     document.getElementById("mr").innerHTML='Sorting Algorithm: Merge Sort';
     var rght,rend;
     var i,j,m;

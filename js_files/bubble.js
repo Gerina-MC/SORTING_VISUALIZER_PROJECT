@@ -12,6 +12,7 @@ async function bub()
     document.getElementById("se").disabled=true;
     document.getElementById("in").disabled=true;
     document.getElementById("me").disabled=true;
+    document.getElementById("qu").disabled=true;
     document.getElementById("mr").innerHTML='Sorting Algorithm: Bubble Sort';
     for(let i=0;i<no_of_bar-1;i++)
     {
