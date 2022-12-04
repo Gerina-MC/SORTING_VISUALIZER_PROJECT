@@ -56,6 +56,7 @@ async function qui()
                 a.style.height=h3;
             }
         }
+        await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
         var j4="n"+(i+1).toString();
         var d=document.getElementById(j4);
         var h4=d.style.getPropertyValue("height");
