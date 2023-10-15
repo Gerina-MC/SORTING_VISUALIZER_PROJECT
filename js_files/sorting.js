@@ -1,3 +1,6 @@
+var fl=0;
+var wid;
+var no_of_bar;
 function onld()
 {
     document.getElementById("arr_sz").disabled=true;
@@ -8,8 +11,10 @@ function onld()
     document.getElementById("me").disabled=true;
     document.getElementById("qu").disabled=true;
 }
+
 function create_array()
 {
+    fl=1;
     document.getElementById("arr_sz").disabled=false;
     document.getElementById("arr_sp").disabled=false;
     document.getElementById("bu").disabled=false;
@@ -23,15 +28,17 @@ function create_array()
     var v = document.createElement("div");
     v.setAttribute("id","Ar_Dis");
     v.setAttribute("class","box");
+    wid=$(window).width()-20;
+    v.style.width=wid;
     document.getElementById("Ar").appendChild(v);
     var arr_size=document.querySelector("#arr_sz"); 
-    var no_of_bar=arr_size.value;
+    no_of_bar=arr_size.value;
     arr_size.addEventListener("input",create_array);
     for(let i=0;i<no_of_bar;i++)
     {
         var h = Math.floor(Math.random()*100)+1;
         var div = document.createElement("div");
-        var w=300/no_of_bar;
+        var w=wid/no_of_bar;
         var nh=h*5/2;
         div.style.width = w.toString()+"px";
         div.style.height = nh.toString()+"px";
@@ -43,3 +50,22 @@ function create_array()
         document.getElementById("Ar_Dis").appendChild(div);
     }
 }
+
+function executeAfterResize() {
+    if(fl==1)
+    {
+        wid=$(window).width()-20;
+        document.getElementById("Ar_Dis").style.width=wid.toString()+"px";
+        var w=wid/no_of_bar;
+        for(let i=0;i<no_of_bar;i++)
+        {
+            var it="n"+i.toString();
+            document.getElementById(it).style.width=w.toString()+"px";
+        }
+    }
+}
+var timeId = null;
+window.addEventListener('resize', () => {
+    clearTimeout(timeId);
+    timeId = setTimeout(executeAfterResize, 0);
+});

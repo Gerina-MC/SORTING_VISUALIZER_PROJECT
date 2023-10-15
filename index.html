@@ -12,27 +12,36 @@
         <script src="js_files/insertion.js"></script>
         <script src="js_files/merge.js"></script>
         <script src="js_files/quick.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body onload="onld()">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <nav class="navbar navbar-light bg-light">
+        <nav id="na" class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Sorting Visualizer</span>
             </div>
-            <div class="d-flex justify-content">
+            <!--<div class="d-flex justify-content">-->
+            <div>
                 <button id="cr" class="button button1" onclick="create_array()">New Array</button>
+            </div>
+            <div>
                 <span>Array size:
                     <input id="arr_sz" type="range"  min=10 max=100 step=1 value=50>
                 </span>
+            </div>
+            <div>
                 <span>Speed:
                     <input id="arr_sp" type="range"  min=0.1 max=1000 step=0.1 value=1000>
                 </span>
+            </div>
+            <div style="margin: auto">
                 <button id="bu" class="button button2" onclick="bub()">Bubble Sort</button>
                 <button id="se" class="button button2" onclick="sel()">Selection Sort</button>
                 <button id="in" class="button button2" onclick="ins()">Insertion Sort</button>
                 <button id="me" class="button button2" onclick="mer()">Merge Sort</button>
                 <button id="qu" class="button button2" onclick="qui()">Quick Sort</button>
             </div>
+            <!--</div>-->
         </nav>
         <h4 id="mr" style="text-align:center">Create an Array</h4>
         <div id="Ar" class="box">

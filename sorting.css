@@ -28,8 +28,7 @@
 
 .button2 {
     background-color: white; 
-    color: #008CBA; 
-    float: right;
+    color: #008CBA;
     border: 2px solid #008CBA;
 }
 
@@ -46,6 +45,7 @@
 
 .box{
     margin:auto;
-    height:251px;
-    width:301px;
+    /*height:251px;*/
+    text-align: center;
+    /*width:301px;*/
 }
