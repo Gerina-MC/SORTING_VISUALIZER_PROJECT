@@ -42,6 +42,38 @@
     background-color: grey;
     color: black;
 }
+.button3 {
+    background-color: white; 
+    color: #ffdf00;
+    border: 2px solid #ffdf00;
+}
+
+.button3:hover {
+    background-color: #ffdf00;
+    color: white;
+}
+
+.button3:disabled {
+    border: 2px solid grey;
+    background-color: grey;
+    color: black;
+}
+.button4 {
+    background-color: white; 
+    color: red;
+    border: 2px solid red;
+}
+
+.button4:hover {
+    background-color: red;
+    color: white;
+}
+
+.button4:disabled {
+    border: 2px solid grey;
+    background-color: grey;
+    color: black;
+}
 
 .box{
     margin:auto;

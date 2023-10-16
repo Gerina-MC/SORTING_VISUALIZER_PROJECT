@@ -13,7 +13,17 @@ async function qui()
     document.getElementById("in").disabled=true;
     document.getElementById("me").disabled=true;
     document.getElementById("qu").disabled=true;
+    document.getElementById("pau").disabled=false;
     document.getElementById("mr").innerHTML='Sorting Algorithm: Quick Sort';
+    var arh=[];
+    for(let i=0;i<no_of_bar;i++)
+    {
+        var tyn="n"+i.toString();
+        var ty=document.getElementById(tyn);
+        var hty=ty.style.getPropertyValue("height");
+        var pty=parseFloat(hty);
+        arh.push(pty);
+    }
     var b=[];
     for(var i=0;i<n;i++)
     {
@@ -30,11 +40,71 @@ async function qui()
         var p2=parseFloat(h2);
         g.style.background="red";
         await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+        document.getElementById("res").disabled=false;
+        while(document.getElementById("pau").innerHTML=="Resume")
+        {
+            await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+            if(document.getElementById("res").innerHTML=="done")
+            {
+                document.getElementById("res").innerHTML="Reset";
+                for(let im=0;im<no_of_bar;im++)
+                {
+                    var tyn="n"+im.toString();
+                    var ty=document.getElementById(tyn);
+                    ty.style.height=arh[im].toString()+"px";
+                    ty.style.background="blue";
+                }
+                document.getElementById("res").disabled=true;
+                document.getElementById("cr").disabled=false;
+                document.getElementById("pau").disabled=true;
+                document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                document.getElementById("arr_sz").disabled=false;
+                document.getElementById("arr_sp").disabled=false;
+                document.getElementById("bu").disabled=false;
+                document.getElementById("se").disabled=false;
+                document.getElementById("in").disabled=false;
+                document.getElementById("me").disabled=false;
+                document.getElementById("qu").disabled=false;
+                document.getElementById("pau").innerHTML="Pause";
+                return;
+            }
+        }
+        document.getElementById("res").disabled=true;
         i=p-1;
         if(p==r)
         {
             g.style.background="green";
             await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+            document.getElementById("res").disabled=false;
+            while(document.getElementById("pau").innerHTML=="Resume")
+            {
+                await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+                if(document.getElementById("res").innerHTML=="done")
+                {
+                    document.getElementById("res").innerHTML="Reset";
+                    for(let im=0;im<no_of_bar;im++)
+                    {
+                        var tyn="n"+im.toString();
+                        var ty=document.getElementById(tyn);
+                        ty.style.height=arh[im].toString()+"px";
+                        ty.style.background="blue";
+                    }
+                    document.getElementById("res").disabled=true;
+                    document.getElementById("cr").disabled=false;
+                    document.getElementById("pau").disabled=true;
+                    document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                    document.getElementById("arr_sz").disabled=false;
+                    document.getElementById("arr_sp").disabled=false;
+                    document.getElementById("bu").disabled=false;
+                    document.getElementById("se").disabled=false;
+                    document.getElementById("in").disabled=false;
+                    document.getElementById("me").disabled=false;
+                    document.getElementById("qu").disabled=false;
+                    document.getElementById("pau").innerHTML="Pause";
+                    return;
+                }
+            }
+            document.getElementById("res").disabled=true;
             b[r]=1;
         }
         else
@@ -46,6 +116,36 @@ async function qui()
             var h1=a.style.getPropertyValue("height");
             var p1=parseFloat(h1);
             await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+            document.getElementById("res").disabled=false;
+            while(document.getElementById("pau").innerHTML=="Resume")
+            {
+                await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+                if(document.getElementById("res").innerHTML=="done")
+                {
+                    document.getElementById("res").innerHTML="Reset";
+                    for(let im=0;im<no_of_bar;im++)
+                    {
+                        var tyn="n"+im.toString();
+                        var ty=document.getElementById(tyn);
+                        ty.style.height=arh[im].toString()+"px";
+                        ty.style.background="blue";
+                    }
+                    document.getElementById("res").disabled=true;
+                    document.getElementById("cr").disabled=false;
+                    document.getElementById("pau").disabled=true;
+                    document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                    document.getElementById("arr_sz").disabled=false;
+                    document.getElementById("arr_sp").disabled=false;
+                    document.getElementById("bu").disabled=false;
+                    document.getElementById("se").disabled=false;
+                    document.getElementById("in").disabled=false;
+                    document.getElementById("me").disabled=false;
+                    document.getElementById("qu").disabled=false;
+                    document.getElementById("pau").innerHTML="Pause";
+                    return;
+                }
+            }
+            document.getElementById("res").disabled=true;
             if(p1<=p2)
             {
                 i++;
@@ -57,6 +157,36 @@ async function qui()
             }
         }
         await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+        document.getElementById("res").disabled=false;
+        while(document.getElementById("pau").innerHTML=="Resume")
+        {
+            await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+            if(document.getElementById("res").innerHTML=="done")
+            {
+                document.getElementById("res").innerHTML="Reset";
+                for(let im=0;im<no_of_bar;im++)
+                {
+                    var tyn="n"+im.toString();
+                    var ty=document.getElementById(tyn);
+                    ty.style.height=arh[im].toString()+"px";
+                    ty.style.background="blue";
+                }
+                document.getElementById("res").disabled=true;
+                document.getElementById("cr").disabled=false;
+                document.getElementById("pau").disabled=true;
+                document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                document.getElementById("arr_sz").disabled=false;
+                document.getElementById("arr_sp").disabled=false;
+                document.getElementById("bu").disabled=false;
+                document.getElementById("se").disabled=false;
+                document.getElementById("in").disabled=false;
+                document.getElementById("me").disabled=false;
+                document.getElementById("qu").disabled=false;
+                document.getElementById("pau").innerHTML="Pause";
+                return;
+            }
+        }
+        document.getElementById("res").disabled=true;
         var j4="n"+(i+1).toString();
         var d=document.getElementById(j4);
         var h4=d.style.getPropertyValue("height");
@@ -68,8 +198,68 @@ async function qui()
         e.style.background="blue";
         d.style.background="red";
         await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+        document.getElementById("res").disabled=false;
+        while(document.getElementById("pau").innerHTML=="Resume")
+        {
+            await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+            if(document.getElementById("res").innerHTML=="done")
+            {
+                document.getElementById("res").innerHTML="Reset";
+                for(let im=0;im<no_of_bar;im++)
+                {
+                    var tyn="n"+im.toString();
+                    var ty=document.getElementById(tyn);
+                    ty.style.height=arh[im].toString()+"px";
+                    ty.style.background="blue";
+                }
+                document.getElementById("res").disabled=true;
+                document.getElementById("cr").disabled=false;
+                document.getElementById("pau").disabled=true;
+                document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                document.getElementById("arr_sz").disabled=false;
+                document.getElementById("arr_sp").disabled=false;
+                document.getElementById("bu").disabled=false;
+                document.getElementById("se").disabled=false;
+                document.getElementById("in").disabled=false;
+                document.getElementById("me").disabled=false;
+                document.getElementById("qu").disabled=false;
+                document.getElementById("pau").innerHTML="Pause";
+                return;
+            }
+        }
+        document.getElementById("res").disabled=true;
         d.style.background="green";
         await new Promise(resolve => {setTimeout(() => resolve(''), sp)});
+        document.getElementById("res").disabled=false;
+        while(document.getElementById("pau").innerHTML=="Resume")
+        {
+            await new Promise(resolve => {setTimeout(() => resolve(''), 1)});
+            if(document.getElementById("res").innerHTML=="done")
+            {
+                document.getElementById("res").innerHTML="Reset";
+                for(let im=0;im<no_of_bar;im++)
+                {
+                    var tyn="n"+im.toString();
+                    var ty=document.getElementById(tyn);
+                    ty.style.height=arh[im].toString()+"px";
+                    ty.style.background="blue";
+                }
+                document.getElementById("res").disabled=true;
+                document.getElementById("cr").disabled=false;
+                document.getElementById("pau").disabled=true;
+                document.getElementById("mr").innerHTML='Choose a Sorting Algorithm or Create New Array';
+                document.getElementById("arr_sz").disabled=false;
+                document.getElementById("arr_sp").disabled=false;
+                document.getElementById("bu").disabled=false;
+                document.getElementById("se").disabled=false;
+                document.getElementById("in").disabled=false;
+                document.getElementById("me").disabled=false;
+                document.getElementById("qu").disabled=false;
+                document.getElementById("pau").innerHTML="Pause";
+                return;
+            }
+        }
+        document.getElementById("res").disabled=true;
         r=i+1;
         b[r]=1;
         }
@@ -124,5 +314,7 @@ async function qui()
         }
     }
     document.getElementById("cr").disabled=false;
-    document.getElementById("mr").innerHTML='Create an Array';
+    document.getElementById("pau").disabled=true;
+    document.getElementById("res").disabled=false;
+    document.getElementById("mr").innerHTML='Create an Array or Reset';
 }
